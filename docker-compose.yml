@@ -3,7 +3,7 @@ services:
   web:
     image: nginx:1.15.6
     ports:
-      - "8000:80"
+      - "8001:80"
     depends_on: # 追加
       - app
     volumes:
@@ -18,10 +18,10 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: ****
-      MYSQL_USER: ****
-      MYSQL_PASSWORD: ****
-      MYSQL_ROOT_PASSWORD: ****
+      MYSQL_DATABASE: common
+      MYSQL_USER: jazzbass
+      MYSQL_PASSWORD: jazzbass
+      MYSQL_ROOT_PASSWORD: jazzbass
     ports:
       - "3306:3306"
     volumes:
